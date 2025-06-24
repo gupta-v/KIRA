@@ -1,0 +1,41 @@
+2025-06-20 20:03:31,266 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_is_the_project_.._rate_it_on_scale_of_1_-_10_,_also_des_20250620_200331.log
+2025-06-20 20:03:31,267 - INFO - run_tutor - ============================================================
+2025-06-20 20:03:31,267 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-20 20:03:31,268 - INFO - run_tutor - Query: what is the project .. rate it on scale of 1 - 10 , also describe the techstack
+2025-06-20 20:03:31,268 - INFO - run_tutor - User ID: default_user
+2025-06-20 20:03:31,269 - INFO - run_tutor - ============================================================
+2025-06-20 20:03:31,269 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-20 20:03:31,278 - INFO - build_graph - Graph built successfully
+2025-06-20 20:03:31,283 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-20 20:03:32,505 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-20 20:03:32,532 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-20 20:03:32,535 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-20 20:03:32,538 - INFO - run_research - Executing research for query: what is the project .. rate it on scale of 1 - 10 , also describe the techstack...
+2025-06-20 20:03:34,614 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:34,626 - INFO - tavily_search - Tavily search for: Vaibhav AI project
+2025-06-20 20:03:40,003 - INFO - tavily_search - Tavily search completed successfully.
+2025-06-20 20:03:41,245 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:41,978 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:41,979 - INFO - run_summarizer - Executing summarizer on text of length 416...
+2025-06-20 20:03:42,217 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:42,219 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 410
+2025-06-20 20:03:42,220 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 20:03:42,220 - INFO - drafter_node - Drafting attempt #1
+2025-06-20 20:03:42,221 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-20 20:03:43,795 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:43,797 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 20:03:43,798 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 20:03:43,798 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 20:03:43,799 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 20:03:43,800 - INFO - run_verifier - Executing verifier...
+2025-06-20 20:03:44,018 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:03:44,019 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: True
+2025-06-20 20:03:44,020 - INFO - should_continue_verification - Verification decision - Verified: True, Attempts: 1/2
+2025-06-20 20:03:44,020 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-20 20:03:44,021 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-20 20:03:44,021 - INFO - run_enhancer - Executing enhancer...
+2025-06-20 20:03:46,948 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 20:04:08,343 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-20 20:04:08,361 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-20 20:04:08,362 - INFO - run_tutor - SESSION COMPLETED in 37.09s
+2025-06-20 20:04:08,362 - INFO - run_tutor - ============================================================

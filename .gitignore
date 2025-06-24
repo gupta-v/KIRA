@@ -1,0 +1,15 @@
+.env
+.env.local
+.venv
+.codegpt
+env/
+venv/
+venviron/
+__pycache__/
+backend/
+docs/
+scraped_content.txt
+config.py
+path.py
+AIO.py
+vosk-model-en-in-0.5/

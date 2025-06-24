@@ -1,0 +1,66 @@
+2025-06-20 22:38:08,555 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_is_the_project..._rate_the_project_on_scale_of_1-10.._a_20250620_223808.log
+2025-06-20 22:38:08,555 - INFO - run_tutor - ============================================================
+2025-06-20 22:38:08,555 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-20 22:38:08,556 - INFO - run_tutor - Query: what is the project... rate the project on scale of 1-10.. also describe the project techstack and compare the project with industry standards
+2025-06-20 22:38:08,556 - INFO - run_tutor - User ID: default_user
+2025-06-20 22:38:08,557 - INFO - run_tutor - ============================================================
+2025-06-20 22:38:08,557 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-20 22:38:08,581 - INFO - build_graph - Graph built successfully
+2025-06-20 22:38:08,603 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-20 22:38:09,906 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-20 22:38:09,921 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-20 22:38:09,922 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-20 22:38:09,937 - INFO - run_research - Executing research for query: what is the project... rate the project on scale of 1-10.. also describe the project techstack and c...
+2025-06-20 22:38:11,453 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:11,684 - INFO - arxiv_search - ArXiv search for: picTranslate project
+2025-06-20 22:38:11,704 - INFO - __try_parse_feed - Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=picTranslate+project&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-06-20 22:38:12,036 - INFO - __try_parse_feed - Sleeping: 3.000000 seconds
+2025-06-20 22:38:15,037 - INFO - __try_parse_feed - Requesting page (first: True, try: 1): https://export.arxiv.org/api/query?search_query=picTranslate+project&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-06-20 22:38:15,356 - INFO - __try_parse_feed - Sleeping: 3.000000 seconds
+2025-06-20 22:38:18,357 - INFO - __try_parse_feed - Requesting page (first: True, try: 2): https://export.arxiv.org/api/query?search_query=picTranslate+project&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-06-20 22:38:18,650 - INFO - __try_parse_feed - Sleeping: 3.000000 seconds
+2025-06-20 22:38:21,651 - INFO - __try_parse_feed - Requesting page (first: True, try: 3): https://export.arxiv.org/api/query?search_query=picTranslate+project&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-06-20 22:38:21,908 - ERROR - arxiv_search - ArXiv search error: Page request resulted in HTTP 400 (https://export.arxiv.org/api/query?search_query=picTranslate+project&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2025-06-20 22:38:23,761 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:23,763 - INFO - tavily_search - Tavily search for: picTranslate project
+2025-06-20 22:38:28,306 - INFO - tavily_search - Tavily search completed successfully.
+2025-06-20 22:38:30,611 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:30,613 - INFO - wiki_search - Wikipedia search for: EdgeConnect Inpainting
+2025-06-20 22:38:33,552 - INFO - wiki_search - Wikipedia search completed successfully.
+2025-06-20 22:38:35,066 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:35,067 - INFO - run_summarizer - Executing summarizer on text of length 1613...
+2025-06-20 22:38:35,486 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:35,488 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 1155
+2025-06-20 22:38:35,488 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 22:38:35,489 - INFO - drafter_node - Drafting attempt #1
+2025-06-20 22:38:35,489 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-20 22:38:37,223 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:37,224 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 22:38:37,224 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 22:38:37,225 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 22:38:37,226 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 22:38:37,226 - INFO - run_verifier - Executing verifier...
+2025-06-20 22:38:38,175 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:38,177 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 22:38:38,177 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 1/2
+2025-06-20 22:38:38,178 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 22:38:38,179 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 22:38:38,179 - INFO - drafter_node - Drafting attempt #2
+2025-06-20 22:38:38,179 - INFO - run_drafter - Executing drafter in revision mode...
+2025-06-20 22:38:41,106 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:41,107 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 22:38:41,108 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 22:38:41,108 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 22:38:41,108 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 22:38:41,108 - INFO - run_verifier - Executing verifier...
+2025-06-20 22:38:41,524 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:38:41,527 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: True
+2025-06-20 22:38:41,527 - INFO - should_continue_verification - Verification decision - Verified: True, Attempts: 2/2
+2025-06-20 22:38:41,527 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-20 22:38:41,528 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-20 22:38:41,528 - INFO - run_enhancer - Executing enhancer...
+2025-06-20 22:38:44,466 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 22:39:26,680 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-20 22:39:26,698 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-20 22:39:26,698 - INFO - run_tutor - SESSION COMPLETED in 78.14s
+2025-06-20 22:39:26,699 - INFO - run_tutor - ============================================================

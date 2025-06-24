@@ -1,0 +1,127 @@
+2025-06-21 13:38:59,732 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_is_my_project..._20250621_133859.log
+2025-06-21 13:38:59,733 - INFO - run_tutor - ============================================================
+2025-06-21 13:38:59,733 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-21 13:38:59,734 - INFO - run_tutor - Query: what is my project...
+2025-06-21 13:38:59,734 - INFO - run_tutor - User ID: default_user
+2025-06-21 13:38:59,734 - INFO - run_tutor - ============================================================
+2025-06-21 13:38:59,735 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-21 13:38:59,746 - INFO - build_graph - Graph built successfully
+2025-06-21 13:38:59,752 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-21 13:39:01,110 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-21 13:39:01,148 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-21 13:39:01,151 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-21 13:39:01,155 - INFO - run_research - Executing research for query: what is my project......
+2025-06-21 13:39:01,155 - INFO - run_research - Using RAG tool for retrieval...
+2025-06-21 13:39:01,156 - INFO - retrieve_answer - Searching for: 'Previous conversation context:
+
+Relevant past conversations:
+- The project is an AI-based web application for translating text in images while preserving the original background
+- The AI Tutor project is a multimodal educational assistant focused on personalized and interactive learning
+- The user wants the project rated on a scale of 1 to 10
+- The project is well-aligned with current industry trends in AI and Computer Vision
+- The project is rated 8.5 out of 10 in terms of complexity and technological innovation
+- The project is named picTranslate
+- The project uses AWS Translate for language translation
+- The project uniquely combines advanced technologies to preserve image background while translating text
+- The project uses Retrieval-Augmented Generation (RAG) to enhance knowledge retrieval and generation
+- The project uses EdgeConnect Inpainting for image regeneration
+
+Current query: what is my project...'
+2025-06-21 13:39:01,784 - INFO - _send_single_request - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-21 13:39:01,793 - INFO - run_research - RAG research successful: 3083 chars
+2025-06-21 13:39:01,794 - INFO - run_summarizer - Executing summarizer on text of length 3083...
+2025-06-21 13:39:02,361 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:39:02,374 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 1155
+2025-06-21 13:39:02,376 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:39:02,376 - INFO - drafter_node - Drafting attempt #1
+2025-06-21 13:39:02,377 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-21 13:39:05,014 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:39:05,016 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:39:05,017 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:39:05,017 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:39:05,017 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:39:05,018 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:39:05,605 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:39:05,610 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: True
+2025-06-21 13:39:05,611 - INFO - should_continue_verification - Verification decision - Verified: True, Attempts: 1/2
+2025-06-21 13:39:05,611 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-21 13:39:05,612 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-21 13:39:05,613 - INFO - run_enhancer - Executing enhancer...
+2025-06-21 13:39:08,891 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:39:46,314 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-21 13:39:46,340 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-21 13:39:46,341 - INFO - run_tutor - SESSION COMPLETED in 46.61s
+2025-06-21 13:39:46,341 - INFO - run_tutor - ============================================================
+2025-06-21 13:42:19,726 - INFO - run_tutor - ============================================================
+2025-06-21 13:42:19,727 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-21 13:42:19,729 - INFO - run_tutor - Query: qit
+2025-06-21 13:42:19,729 - INFO - run_tutor - User ID: default_user
+2025-06-21 13:42:19,729 - INFO - run_tutor - ============================================================
+2025-06-21 13:42:19,730 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-21 13:42:19,734 - INFO - build_graph - Graph built successfully
+2025-06-21 13:42:19,737 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-21 13:42:21,132 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-21 13:42:21,164 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-21 13:42:21,166 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-21 13:42:21,167 - INFO - run_research - Executing research for query: [Context: referring to project...] qit...
+2025-06-21 13:42:21,168 - INFO - run_research - Using RAG tool for retrieval...
+2025-06-21 13:42:21,169 - INFO - retrieve_answer - Searching for: 'Previous conversation context:
+Recent conversation:
+Q: what is my project...
+A: **Unlocking the Power of Personalized Learning: Introducing Your AI-Powered Project**
+
+Imagine a learning experience that's tailored to your unique needs, interests, and abilities. A platform that com...
+Current topic context: general
+
+
+Relevant past conversations:
+- User's project is called 'AI Tutor: An Agentic, Multi-Modal Learning System'
+- The project is an AI-powered educational platform designed to provide personalized learning experiences
+- The project is an AI-based web application for translating text in images while preserving the original background
+- The project is named picTranslate
+- The project is well-aligned with current industry trends in AI and Computer Vision
+- The project uses Retrieval-Augmented Generation (RAG) to enhance knowledge retrieval and generation
+- The project uniquely combines advanced technologies to preserve image background while translating text
+- The user wants the project rated on a scale of 1 to 10
+- The project development is divided into four phases: knowledge retrieval and web scraping, solution evaluation and AI teaching, scaling and deployment, and fine-tuning learning paths with Agentic AI
+- The AI Tutor project is a multimodal educational assistant focused on personalized and interactive learning
+
+Current query: [Context: referring to project...] qit'
+2025-06-21 13:42:22,266 - INFO - _send_single_request - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-21 13:42:22,267 - INFO - run_research - RAG research successful: 3083 chars
+2025-06-21 13:42:22,267 - INFO - run_summarizer - Executing summarizer on text of length 3083...
+2025-06-21 13:42:22,962 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:42:22,964 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 1627
+2025-06-21 13:42:22,964 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:42:22,965 - INFO - drafter_node - Drafting attempt #1
+2025-06-21 13:42:22,965 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-21 13:42:25,148 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:42:25,149 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:42:25,150 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:42:25,150 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:42:25,151 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:42:25,151 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:42:26,056 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:42:26,060 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-21 13:42:26,061 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 1/2
+2025-06-21 13:42:26,061 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-21 13:42:26,062 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:42:26,062 - INFO - drafter_node - Drafting attempt #2
+2025-06-21 13:42:26,063 - INFO - run_drafter - Executing drafter in revision mode...
+2025-06-21 13:42:28,942 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:42:28,958 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:42:28,959 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:42:28,960 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:42:28,960 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:42:28,961 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:42:29,701 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:42:29,705 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-21 13:42:29,705 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 2/2
+2025-06-21 13:42:29,706 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-21 13:42:29,706 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-21 13:42:29,706 - INFO - run_enhancer - Executing enhancer...
+2025-06-21 13:42:32,838 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:43:14,021 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-21 13:43:14,049 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-21 13:43:14,050 - INFO - run_tutor - SESSION COMPLETED in 54.32s
+2025-06-21 13:43:14,051 - INFO - run_tutor - ============================================================

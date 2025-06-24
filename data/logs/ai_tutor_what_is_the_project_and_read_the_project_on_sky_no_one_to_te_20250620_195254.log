@@ -1,0 +1,148 @@
+2025-06-20 19:52:54,003 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_is_the_project_and_read_the_project_on_sky_no_one_to_te_20250620_195254.log
+2025-06-20 19:52:54,004 - INFO - run_tutor - ============================================================
+2025-06-20 19:52:54,004 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-20 19:52:54,005 - INFO - run_tutor - Query: what is the project and read the project on sky no one to ten and also described the tech stack
+2025-06-20 19:52:54,005 - INFO - run_tutor - User ID: default_user
+2025-06-20 19:52:54,007 - INFO - run_tutor - ============================================================
+2025-06-20 19:52:54,007 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-20 19:52:54,016 - INFO - build_graph - Graph built successfully
+2025-06-20 19:52:54,041 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-20 19:52:55,345 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-20 19:52:55,370 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-20 19:52:55,372 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-20 19:52:55,376 - INFO - run_research - Executing research for query: what is the project and read the project on sky no one to ten and also described the tech stack...
+2025-06-20 19:52:57,792 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:52:57,806 - INFO - wiki_search - Wikipedia search for: Sky project
+2025-06-20 19:53:00,928 - INFO - wiki_search - Wikipedia search completed successfully.
+2025-06-20 19:53:02,733 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:02,735 - INFO - tavily_search - Tavily search for: Sky project description and tech stack
+2025-06-20 19:53:06,444 - INFO - tavily_search - Tavily search completed successfully.
+2025-06-20 19:53:07,777 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:07,778 - INFO - web_response - Web scraper search for: Sky project description and tech stack
+2025-06-20 19:53:10,920 - INFO - web_response - Web scraping completed successfully
+2025-06-20 19:53:18,897 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:18,900 - INFO - run_summarizer - Executing summarizer on text of length 431...
+2025-06-20 19:53:19,221 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:19,223 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 778
+2025-06-20 19:53:19,224 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:19,225 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:21,275 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:21,276 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:21,276 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:21,277 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:21,277 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:21,277 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:21,534 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:21,536 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:21,537 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:21,537 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:21,538 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:21,538 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:25,298 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:25,300 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:25,301 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:25,301 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:25,301 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:25,302 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:25,580 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:25,582 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:25,582 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:25,583 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:25,583 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:25,584 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:28,793 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:28,794 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:28,795 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:28,795 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:28,795 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:28,796 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:29,070 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:29,072 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:29,073 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:29,073 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:29,074 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:29,074 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:32,395 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:32,397 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:32,397 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:32,397 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:32,398 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:32,398 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:32,714 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:32,716 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:32,716 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:32,717 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:32,717 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:32,718 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:44,436 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:44,438 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:44,439 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:44,439 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:44,441 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:44,441 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:44,825 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:44,828 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:44,828 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:44,828 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:44,829 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:44,829 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:48,304 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:48,306 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:48,307 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:48,307 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:48,308 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:48,308 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:48,589 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:48,591 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:48,592 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:48,592 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:48,593 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:48,594 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:51,810 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:51,811 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:51,812 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:51,812 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:51,813 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:51,813 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:52,147 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:52,148 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:52,149 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:52,149 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:52,150 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:52,150 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:56,066 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:56,069 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:56,070 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:56,071 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:56,072 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:56,073 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:53:56,415 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:56,416 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:53:56,417 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:53:56,417 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:53:56,418 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:53:56,418 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:53:59,962 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:53:59,964 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:53:59,965 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:53:59,965 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:53:59,966 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:53:59,966 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:54:00,249 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:54:00,250 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:54:00,251 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:54:00,251 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:54:00,252 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:54:00,252 - INFO - run_drafter - Executing drafter...
+2025-06-20 19:54:03,825 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:54:03,826 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-20 19:54:03,828 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-20 19:54:03,828 - INFO - should_continue_research - Proceeding to verifier
+2025-06-20 19:54:03,828 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-20 19:54:03,829 - INFO - run_verifier - Executing verifier...
+2025-06-20 19:54:04,089 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-20 19:54:04,091 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-20 19:54:04,092 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 0/2
+2025-06-20 19:54:04,093 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-20 19:54:04,094 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-20 19:54:04,094 - INFO - run_drafter - Executing drafter...

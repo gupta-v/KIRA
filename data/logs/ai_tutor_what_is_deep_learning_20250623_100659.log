@@ -1,0 +1,40 @@
+2025-06-23 10:06:59,797 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_is_deep_learning_20250623_100659.log
+2025-06-23 10:06:59,797 - INFO - run_tutor - ============================================================
+2025-06-23 10:06:59,797 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-23 10:06:59,798 - INFO - run_tutor - Query: what is deep learning
+2025-06-23 10:06:59,798 - INFO - run_tutor - User ID: default_user
+2025-06-23 10:06:59,799 - INFO - run_tutor - ============================================================
+2025-06-23 10:06:59,800 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-23 10:06:59,812 - INFO - build_graph - Graph built successfully
+2025-06-23 10:06:59,967 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-23 10:07:01,428 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-23 10:07:01,451 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-23 10:07:01,454 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-23 10:07:01,461 - INFO - run_research - Executing research for query: what is deep learning...
+2025-06-23 10:07:03,279 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:03,293 - INFO - wiki_search - Wikipedia search for: deep learning
+2025-06-23 10:07:06,718 - INFO - wiki_search - Wikipedia search completed successfully.
+2025-06-23 10:07:07,499 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:07,506 - INFO - run_summarizer - Executing summarizer on text of length 686...
+2025-06-23 10:07:07,982 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:07,984 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 300
+2025-06-23 10:07:07,986 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-23 10:07:07,986 - INFO - drafter_node - Drafting attempt #1
+2025-06-23 10:07:07,986 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-23 10:07:10,080 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:10,082 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-23 10:07:10,084 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-23 10:07:10,084 - INFO - should_continue_research - Proceeding to verifier
+2025-06-23 10:07:10,085 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-23 10:07:10,086 - INFO - run_verifier - Executing verifier...
+2025-06-23 10:07:10,660 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:10,667 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: True
+2025-06-23 10:07:10,668 - INFO - should_continue_verification - Verification decision - Verified: True, Attempts: 1/2
+2025-06-23 10:07:10,668 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-23 10:07:10,669 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-23 10:07:10,670 - INFO - run_enhancer - Executing enhancer...
+2025-06-23 10:07:13,515 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-23 10:07:47,673 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-23 10:07:47,699 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-23 10:07:47,703 - INFO - run_tutor - SESSION COMPLETED in 47.90s
+2025-06-23 10:07:47,704 - INFO - run_tutor - ============================================================

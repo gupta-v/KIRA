@@ -1,0 +1,99 @@
+2025-06-21 13:05:19,144 - INFO - setup_logging - Logging initialized. Log file: data/logs\ai_tutor_what_are_recent_developement_in_quantum_computing_20250621_130519.log
+2025-06-21 13:05:19,145 - INFO - run_tutor - ============================================================
+2025-06-21 13:05:19,145 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-21 13:05:19,146 - INFO - run_tutor - Query: what are recent developement in quantum computing
+2025-06-21 13:05:19,146 - INFO - run_tutor - User ID: default_user
+2025-06-21 13:05:19,147 - INFO - run_tutor - ============================================================
+2025-06-21 13:05:19,148 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-21 13:05:19,158 - INFO - build_graph - Graph built successfully
+2025-06-21 13:05:19,191 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-21 13:05:20,614 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-21 13:05:20,639 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-21 13:05:20,641 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-21 13:05:20,646 - INFO - run_research - Executing research for query: what are recent developement in quantum computing...
+2025-06-21 13:05:21,954 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:21,966 - INFO - arxiv_search - ArXiv search for: quantum computing
+2025-06-21 13:05:21,989 - INFO - __try_parse_feed - Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=quantum+computing&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-06-21 13:05:22,994 - INFO - _results - Got first page: 100 of 1051190 total results
+2025-06-21 13:05:22,996 - INFO - arxiv_search - ArXiv search completed successfully.
+2025-06-21 13:05:24,649 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:24,651 - INFO - tavily_search - Tavily search for: recent developments in quantum computing
+2025-06-21 13:05:28,212 - INFO - tavily_search - Tavily search completed successfully.
+2025-06-21 13:05:29,596 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:29,603 - INFO - run_summarizer - Executing summarizer on text of length 533...
+2025-06-21 13:05:29,884 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:29,885 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 399
+2025-06-21 13:05:29,886 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:05:29,887 - INFO - drafter_node - Drafting attempt #1
+2025-06-21 13:05:29,887 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-21 13:05:32,234 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:32,235 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:05:32,235 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:05:32,236 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:05:32,236 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:05:32,236 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:05:32,801 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:32,804 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-21 13:05:32,804 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 1/2
+2025-06-21 13:05:32,804 - INFO - should_continue_verification - Continuing to drafter for revision
+2025-06-21 13:05:32,805 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:05:32,806 - INFO - drafter_node - Drafting attempt #2
+2025-06-21 13:05:32,806 - INFO - run_drafter - Executing drafter in revision mode...
+2025-06-21 13:05:36,174 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:36,175 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:05:36,176 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:05:36,176 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:05:36,177 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:05:36,177 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:05:36,838 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:05:36,840 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: False
+2025-06-21 13:05:36,840 - INFO - should_continue_verification - Verification decision - Verified: False, Attempts: 2/2
+2025-06-21 13:05:36,841 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-21 13:05:36,841 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-21 13:05:36,841 - INFO - run_enhancer - Executing enhancer...
+2025-06-21 13:05:40,620 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:06:12,397 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-21 13:06:12,434 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-21 13:06:12,434 - INFO - run_tutor - SESSION COMPLETED in 53.29s
+2025-06-21 13:06:12,435 - INFO - run_tutor - ============================================================
+2025-06-21 13:06:36,059 - INFO - run_tutor - ============================================================
+2025-06-21 13:06:36,060 - INFO - run_tutor - 🚀 STARTING TUTOR SESSION
+2025-06-21 13:06:36,060 - INFO - run_tutor - Query: what did i ask ?
+2025-06-21 13:06:36,061 - INFO - run_tutor - User ID: default_user
+2025-06-21 13:06:36,061 - INFO - run_tutor - ============================================================
+2025-06-21 13:06:36,061 - INFO - build_graph - 🏗️ Building optimized graph
+2025-06-21 13:06:36,066 - INFO - build_graph - Graph built successfully
+2025-06-21 13:06:36,068 - INFO - memory_retrieval_node - 🧠 MEMORY RETRIEVAL STARTED
+2025-06-21 13:06:37,408 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/search/ "HTTP/1.1 200 OK"
+2025-06-21 13:06:37,430 - INFO - memory_retrieval_node - MEMORY RETRIEVAL ENDED
+2025-06-21 13:06:37,431 - INFO - researcher_node - 🔬 RESEARCHER NODE STARTED
+2025-06-21 13:06:37,432 - INFO - run_research - Executing research for query: what did i ask ?...
+2025-06-21 13:07:50,984 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
+2025-06-21 13:07:50,985 - INFO - _sleep_for_retry - Retrying request to /openai/v1/chat/completions in 0.412589 seconds
+2025-06-21 13:07:52,326 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:52,804 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:53,339 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:53,572 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:53,634 - INFO - run_summarizer - Executing summarizer on text of length 75...
+2025-06-21 13:07:53,831 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:53,840 - INFO - researcher_node - RESEARCHER NODE ENDED - Summary Length: 63
+2025-06-21 13:07:53,842 - INFO - drafter_node - ✍️ DRAFTER NODE STARTED
+2025-06-21 13:07:53,843 - INFO - drafter_node - Drafting attempt #1
+2025-06-21 13:07:53,844 - INFO - run_drafter - Executing drafter in initial draft mode...
+2025-06-21 13:07:55,770 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:55,772 - INFO - drafter_node - DRAFTER NODE ENDED
+2025-06-21 13:07:55,773 - INFO - should_continue_research - Research decision - Need more: False, Attempts: 0/2
+2025-06-21 13:07:55,773 - INFO - should_continue_research - Proceeding to verifier
+2025-06-21 13:07:55,775 - INFO - verifier_node - 🔍 VERIFIER NODE STARTED
+2025-06-21 13:07:55,775 - INFO - run_verifier - Executing verifier...
+2025-06-21 13:07:56,388 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:07:56,389 - INFO - verifier_node - VERIFIER NODE ENDED - Passed: True
+2025-06-21 13:07:56,390 - INFO - should_continue_verification - Verification decision - Verified: True, Attempts: 1/2
+2025-06-21 13:07:56,390 - INFO - should_continue_verification - Proceeding to enhancer
+2025-06-21 13:07:56,391 - INFO - enhancer_node - ✨ ENHANCER NODE STARTED
+2025-06-21 13:07:56,391 - INFO - run_enhancer - Executing enhancer...
+2025-06-21 13:07:59,337 - INFO - _send_single_request - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-21 13:08:10,418 - INFO - _send_single_request - HTTP Request: POST https://api.mem0.ai/v1/memories/ "HTTP/1.1 200 OK"
+2025-06-21 13:08:10,446 - INFO - enhancer_node - ENHANCER NODE ENDED
+2025-06-21 13:08:10,447 - INFO - run_tutor - SESSION COMPLETED in 94.39s
+2025-06-21 13:08:10,448 - INFO - run_tutor - ============================================================
