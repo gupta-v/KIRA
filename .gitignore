@@ -13,3 +13,4 @@ config.py
 path.py
 AIO.py
 vosk-model-en-in-0.5/
+.ssh
